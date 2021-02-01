@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Formulario registro e IMC</title>
+</head>
+<body>
+    <div id="container">
+        <form autocomplete="on">
+            <fieldset>
+                <legend>Registro</legend>
+
+                <div class="subcontainer-a">
+                    <label>Nombre:
+                        <input id="nombre" type="text" placeholder="Nombre completo" name="nombre">
+                    </label>
+                    <label>Correo:
+                         <input type="email" placeholder="Ejemplo@gmail.com" name="correo">
+                    </label>
+                    <label>Numero celular:
+                         <input type="tel" placeholder="(662)3-09-80-71" name="telefono">
+                    </label><br>
+                    <label>Estado:
+                        <select name="estado">
+                            <option value="1">Sonora</option>
+                            <option value="2">Chihuahua</option>
+                            <option value="3">Sinaloa</option>
+                            <option value="4">Baja california</option>
+                        </select>
+                    </label><br><br>
+                    <label>Ciudad:
+                        <select name="ciudad">
+                            <option value="1">Hermosillo</option>
+                            <option value="2">Obregon</option>
+                            <option value="3">Mexicali</option>
+                            <option value="4">Culiacan</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="subcontainer-a">
+                    <label>Fecha de nacimiento:
+                        <input type="date" name="fecha-nacimiento">
+                    </label><br>
+                    <div class="radio-button">
+                        <label>Genero:</label>
+                        <input type="radio" id="hombre" value="1">
+                        <label for="hombre">Hombre</label>
+                        <input type="radio" id="mujer" value="2">
+                        <label for="mujer">Mujer</label>
+                    </div><br>
+                    <label>País:
+                        <select name="nacionalidad">
+                            <option value="1">Mexico</option>
+                            <option value="2">USA</option>
+                            <option value="3">Colombia</option>
+                            <option value="4">Argentina</option>
+                        </select>
+                    </label>
+                    <div class="datalist">
+                        <br><label>Lenguaje de programación de preferencia:</label>
+                        <input list="lenguajes">
+                        <datalist id="lenguajes">
+                            <option value="HTML"></option>
+                            <option value="CSS"></option>
+                            <option value="PHP"></option>
+                            <option value="JavaScript"></option>
+                        </datalist>
+                    </div>
+                </div>
+
+                <div class="subcontainer-imc">
+                    <label>Altura:
+                        <input type="number" id="altura">
+                    </label>
+                    <label>Peso:
+                        <input type="number" id="peso">
+                    </label><br>
+                    <button id="calcular-imc" onclick="calcular()">Calcular IMC</button>
+                </div>
+
+                <div class="subcontainer-b">
+                    <label for="textarea">Mensaje:
+                        <textarea name="" id="textarea" cols="80" rows="10"></textarea>
+                    </label>
+                </div>
+                <button>Enviar</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="JS/IMC.js"></script>
+</body>
+</html>
